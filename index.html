@@ -3,18 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valex | Cybersecurity Researcher & Developer</title>
-    <meta name="description" content="Valex (Valex-Grand) - Cybersecurity, Rust, Go and System Security Portfolio.">
+    <title>Valex | Cybersecurity & Systems Researcher</title>
+    <meta name="description" content="Valex-Grand - Cybersecurity Portfolio. Lead Developer of Leviathan and Aegis-Gate. Focus on Rust, Python and Linux Security.">
+    
+    <!-- Google Botları İçin Anahtar Kelimeler -->
+    <meta name="keywords" content="Valex, Valex-Grand, Cybersecurity, Rust, Python, Leviathan, Aegis-Gate, Ethical Hacking, Malware Research">
+    
+    <style>
+        :root {
+            --primary-color: #00ff41; /* Klasik Matrix/Terminal Yeşili */
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --border-color: #30363d;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+            background: rgba(13, 17, 23, 0.95);
+        }
+
+        .terminal-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .dot { height: 12px; width: 12px; border-radius: 50%; display: inline-block; }
+        .red { background-color: #ff5f56; }
+        .yellow { background-color: #ffbd2e; }
+        .green { background-color: #27c93f; }
+
+        h1 { color: var(--primary-color); font-size: 1.8rem; }
+        
+        .typewriter p {
+            overflow: hidden;
+            border-right: .15em solid var(--primary-color);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--primary-color); } }
+
+        .project-card {
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            margin: 15px 0;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: var(--primary-color);
+            background: rgba(0, 255, 65, 0.05);
+        }
+
+        .links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        .links a:hover { text-decoration: underline; }
+
+        .status { color: #8b949e; font-size: 0.9rem; }
+    </style>
 </head>
-<body style="background-color: #0d1117; color: white; font-family: sans-serif; text-align: center; padding-top: 50px;">
-    <h1>Valex-Grand</h1>
-    <p>Cybersecurity Researcher & Software Developer</p>
-    <hr style="width: 50%; border: 1px solid #30363d;">
-    <div style="margin-top: 20px;">
-        <a href="https://github.com/Valex-Grand" style="color: #58a6ff; margin: 10px;">GitHub</a>
-        <a href="https://medium.com/@valexresmii" style="color: #58a6ff; margin: 10px;">Medium</a>
-        <a href="https://linkedin.com/in/valex-grand" style="color: #58a6ff; margin: 10px;">LinkedIn</a>
+<body>
+
+<div class="container">
+    <div class="terminal-header">
+        <div>
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+        </div>
+        <div class="status">valex@root:~/portfolio</div>
     </div>
-    <p style="margin-top: 50px; color: #8b949e;">Projects: Leviathan, Aegis-Gate, Aegis-Eye</p>
+
+    <div class="typewriter">
+        <h1>> VALEX-GRAND</h1>
+    </div>
+    
+    <p>Siber güvenlik araştırmacısı ve düşük seviyeli (low-level) sistem geliştiricisi. Veri güvenliği ve ağ savunma mekanizmaları üzerine yoğunlaşıyorum.</p>
+
+    <h3># Aktif Projeler</h3>
+    
+    <div class="project-card">
+        <strong>⚡ Leviathan Engine</strong>
+        <p>Dosyaları 100 parçaya bölerek katmanlı şifreleme sağlayan Python/Rust tabanlı güvenlik motoru.</p>
+    </div>
+
+    <div class="project-card">
+        <strong>🛡️ Aegis-Gate</strong>
+        <p>Rust ile geliştirilen, gerçek zamanlı ağ trafik filtresi ve güvenlik kalkanı.</p>
+    </div>
+
+    <h3># Sosyal Erişim</h3>
+    <div class="links">
+        <a href="https://github.com/Valex-Grand">GitHub</a>
+        <a href="https://medium.com/@valexresmii">Medium</a>
+        <a href="https://linkedin.com/in/valex-grand">LinkedIn</a>
+    </div>
+
+    <p style="margin-top: 30px; font-size: 0.8rem; color: #444;">
+        &copy; 2026 Valex Terminal. Tüm hakları gizlidir.
+    </p>
+</div>
+
 </body>
 </html>
