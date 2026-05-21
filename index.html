@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valex | Digital Security Architect</title>
     <meta name="description" content="Valex-Grand - Cybersecurity Researcher and Lead Developer of Leviathan & Aegis-Gate.">
-    <!-- Google Site Doğrulama Kodunu Buraya Ekleyebilirsin -->
+    
+    <!-- 🚀 BARIYI VE LINKEDIN'I ZİNCİRLEYEN GOOGLE ŞEMA VERİSİ (SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Valex Grand",
+      "url": "https://valex-grand.github.io/",
+      "sameAs": [
+        "https://www.linkedin.com/in/valex-grand",
+        "https://medium.com/@valexgrand"
+      ],
+      "jobTitle": "Cyber Security Researcher & Software Developer"
+    }
+    </script>
     
     <style>
         :root {
@@ -196,11 +210,12 @@
                     </div>
                 </div>
 
+                <!-- 🔗 BOTLARIN TAKİP EDECEĞİ GÜVENLİ SOSYAL BAĞLANTILAR -->
                 <div class="social-links">
-                    <a href="https://github.com/Valex-Grand">/GITHUB</a>
-                    <a href="https://medium.com/@valexgrand">/MEDIUM</a>
-                    <a href="https://linkedin.com/in/valex-grand">/LINKEDIN</a>
-                    <a href="https://instagram.com/valexgrand" style="opacity: 0.6;">/INSTAGRAM</a>
+                    <a href="https://github.com/Valex-Grand" rel="noopener" target="_blank">/GITHUB</a>
+                    <a href="https://medium.com/@valexgrand" rel="noopener" target="_blank">/MEDIUM</a>
+                    <a href="https://www.linkedin.com/in/valex-grand" rel="noopener" target="_blank">/LINKEDIN</a>
+                    <a href="https://instagram.com/valexgrand" style="opacity: 0.6;" rel="noopener" target="_blank">/INSTAGRAM</a>
                 </div>
 
                 <div class="footer">
@@ -234,10 +249,16 @@
                 const text = characters.charAt(Math.floor(Math.random() * characters.length));
                 ctx.fillText(text, i * fontSize, drops[i] * fontSize);
                 if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+                if (window.innerHeight < canvas.height) { canvas.height = window.innerHeight; }
                 drops[i]++;
             }
         }
         setInterval(draw, 33);
+
+        window.addEventListener('resize', () => {
+            canvas.height = window.innerHeight;
+            canvas.width = window.innerWidth;
+        });
     </script>
 </body>
 </html>
