@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valex Cloud Security Infrastructure</title>
+    <!-- SEO Dopinglemesi -->
+    <meta name="description" content="Valex-Grand - Independent Software Developer & Systems Architect. Core developer of Terminal-Wars and Leviathan architectures.">
+    <meta name="keywords" content="Valex-Grand, Valex, tr.valexisresmii, Terminal-Wars, Leviathan, Go developer, Rust network security">
+    
     <style>
         :root {
             --bg-color: #0a0f1d;
             --panel-bg: rgba(16, 24, 48, 0.95);
             --accent-green: #00ff66;
             --accent-blue: #00d2ff;
+            --accent-purple: #9d4edd;
             --text-main: #ffffff;
             --text-muted: #8fa0dd;
             --border-glow: rgba(0, 210, 255, 0.2);
@@ -296,6 +301,32 @@
             text-shadow: 0 0 10px rgba(255,255,255,0.3);
         }
 
+        /* Projelere Geçiş Butonu (Yeni) */
+        .projects-trigger-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 25px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            font-family: monospace;
+        }
+
+        .projects-trigger-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(157, 78, 221, 0.4);
+            filter: brightness(1.1);
+        }
+
         /* Sosyal Medya Link Alanı */
         .social-networks {
             margin-top: 25px;
@@ -447,6 +478,9 @@
                 <div class="counter-digits" id="counter">000000</div>
             </div>
 
+            <!-- PROJELERE GEÇİŞ TUŞU -->
+            <a href="projects.html" class="projects-trigger-btn">[// INITIALIZE_PROJECTS_DEVOPS &gt;]</a>
+
             <!-- Sosyal Medya Bağlantıları -->
             <div class="social-networks">
                 <h3>🌐 Geliştirici İletişim Kanalları</h3>
@@ -458,6 +492,10 @@
                     <a href="https://github.com/Valex-Grand" target="_blank" class="social-link">
                         <span class="social-name">GitHub Portfolio</span>
                         <span class="social-user">Valex-Grand</span>
+                    </a>
+                    <a href="https://dev.to/valexgrand" target="_blank" class="social-link">
+                        <span class="social-name">Dev.to Technical Blog</span>
+                        <span class="social-user">@valexgrand</span>
                     </a>
                 </div>
             </div>
