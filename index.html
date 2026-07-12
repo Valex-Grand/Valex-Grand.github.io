@@ -7,7 +7,7 @@
     <!-- SEO Dopinglemesi -->
     <meta name="description" content="Valex-Grand - Independent Software Developer & Systems Architect. Core developer of Terminal-Wars and Leviathan architectures.">
     <meta name="keywords" content="Valex-Grand, Valex, tr.valexisresmii, Terminal-Wars, Leviathan, Go developer, Rust network security">
-
+    <canvas id="cyberLoader" style="position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:99999; background:#000; transition: opacity 0.8s ease; pointer-events: none;"></canvas>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -578,5 +578,60 @@
             }
         }, 6000);
     </script>
+
+
+    
+    <script>
+        const canvas = document.getElementById('cyberLoader');
+        const ctx = canvas.getContext('2d');
+
+        // Ekran boyutlarını ayarla
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Siber karakterler ve yağmur sütunları
+        const katakana = 'ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ1023456789ABCDEFGHIJKLMNOPQRSTUVWXYZVALEXGRAND';
+        const alphabet = katakana.split('');
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const rainDrops = Array(Math.floor(columns)).fill(1);
+
+        // Çizim fonksiyonu
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0F0'; // Siber Yeşil
+            ctx.font = fontSize + 'px monospace';
+
+            for(let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet[Math.floor(Math.random() * alphabet.length)];
+                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+                if(rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        }
+
+        // Animasyonu saniyede ~30 kare çalıştır
+        const matrixInterval = setInterval(drawMatrix, 30);
+
+        // 3 saniye sonra perdeyi indir ve animasyonu durdur
+        setTimeout(() => {
+            clearInterval(matrixInterval);
+            canvas.style.opacity = '0';
+            setTimeout(() => {
+                canvas.remove(); // DOM'dan tamamen kaldır, hafıza harcamasın
+            }, 800);
+        }, 3000);
+    </script>
+   
+</body>
 </body>
 </html>
