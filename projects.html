@@ -3,266 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valex-Grand | Core Systems & Architectures</title>
-    <!-- SEO Dopinglemesi -->
-    <meta name="description" content="Valex-Grand official projects deployment vault. Real-time network architectures, Terminal-Wars protocols, and Leviathan cryptographic systems.">
-    <meta name="keywords" content="Valex-Grand projects, Terminal-Wars, Leviathan encryption, Go network programming, Rust async systems">
+    <title>Valex Cloud Security - Geliştirici Projeleri & Sistem Mimarisi</title>
     
+    <!-- Üst Düzey Google Search / SEO Optimizasyonu -->
+    <meta name="description" content="Valex-Grand bağımsız yazılım mimarisi projeleri. Leviathan veri şifreleme ve Terminal-Wars gerçek zamanlı ağ simülasyon sistemleri teknik detayları.">
+    <meta name="keywords" content="Valex-Grand, Valex, tr.valexisresmii, Leviathan şifreleme, Terminal-Wars, Go WebSockets, Rust network, white setup pc">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://valex-grand.github.io/projects.html"> <!-- Kendi domaininle değiştirebilirsin -->
+
     <style>
         :root {
-            --bg-dark: #05070f;
-            --panel-bg: rgba(9, 14, 28, 0.75);
-            --neon-blue: #00d2ff;
-            --neon-purple: #9d4edd;
-            --neon-green: #39ff14;
-            --text-white: #ffffff;
-            --text-gray: #64748b;
-            --terminal-bg: #020408;
+            /* Beyaz Donanım & Siber Minimalizm Teması */
+            --bg-main: #f4f6fa;
+            --panel-bg: #ffffff;
+            --text-primary: #1e2538;
+            --text-secondary: #6c7a9c;
+            --accent-blue: #0088ff;
+            --accent-purple: #7b2cbf;
+            --neon-white: rgba(255, 255, 255, 0.9);
+            --border-color: rgba(0, 0, 0, 0.06);
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.03);
+            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.06);
         }
 
         * {
-            margin: 0; padding: 0; box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-white);
+            background-color: var(--bg-main);
+            color: var(--text-primary);
             min-height: 100vh;
-            padding: 40px 20px;
-            background-image: radial-gradient(circle at 50% 0%, rgba(0, 210, 255, 0.05) 0px, transparent 50%);
+            display: flex;
+            flex-direction: column;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(0, 136, 255, 0.03) 0px, transparent 40%),
+                radial-gradient(at 100% 100%, rgba(123, 44, 191, 0.03) 0px, transparent 40%);
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        /* Üst Navigasyon / Başlık */
-        .header {
+        /* Header Üst Bar */
+        header {
+            background: var(--panel-bg);
+            padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 40px;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
         }
 
-        .logo-area {
-            font-family: monospace;
-            font-weight: 800;
-            font-size: 1.4rem;
-            color: var(--neon-blue);
-            text-shadow: 0 0 10px rgba(0,210,255,0.3);
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
         .back-btn {
-            color: var(--text-gray);
+            color: var(--text-secondary);
             text-decoration: none;
             font-size: 0.9rem;
-            font-family: monospace;
-            transition: color 0.3s;
+            font-weight: 600;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
-        .back-btn:hover { color: var(--neon-purple); }
+        .back-btn:hover {
+            color: var(--accent-blue);
+        }
 
-        /* Proje Grid Yapısı */
-        .project-grid {
+        .logo-text {
+            font-weight: 800;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+            background: linear-gradient(45deg, var(--text-primary), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Ana İçerik Alanı */
+        main {
+            max-width: 1200px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex-grow: 1;
+        }
+
+        .page-title {
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .page-title span {
+            color: var(--accent-purple);
+        }
+
+        /* Proje Grid Düzeni */
+        .projects-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
         }
 
-        .project-panel {
-            background: var(--panel-bg);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 16px;
-            padding: 30px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            border-left: 4px solid var(--neon-blue);
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
-        .project-panel.leviathan { border-left-color: var(--neon-purple); }
+        /* Proje Kartları */
+        .project-card {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
 
-        .project-meta {
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-color: rgba(0, 136, 255, 0.2);
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-blue);
+        }
+
+        .project-card.purple::before {
+            background: var(--accent-purple);
+        }
+
+        .project-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 15px;
-            flex-wrap: wrap;
-            gap: 10px;
         }
 
-        .project-title {
-            font-size: 1.6rem;
+        .project-name {
+            font-size: 1.4rem;
             font-weight: 700;
-            letter-spacing: -0.5px;
+            color: var(--text-primary);
         }
 
-        .tech-badges {
+        .project-status {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: rgba(0, 136, 255, 0.06);
+            color: var(--accent-blue);
+        }
+
+        .project-card.purple .project-status {
+            background: rgba(123, 44, 191, 0.06);
+            color: var(--accent-purple);
+        }
+
+        .project-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        /* Teknik Detay Blokları */
+        .tech-specs {
+            background: #fafbfc;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #2c3e50;
+        }
+
+        .spec-line {
+            margin-bottom: 6px;
             display: flex;
+            justify-content: space-between;
+        }
+
+        .spec-line:last-child {
+            margin-bottom: 0;
+        }
+
+        .spec-label {
+            color: var(--text-secondary);
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
             gap: 8px;
         }
 
-        .badge {
-            font-family: monospace;
+        .tag {
             font-size: 0.75rem;
+            background: #f0f2f6;
+            color: var(--text-primary);
             padding: 4px 10px;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
             border-radius: 6px;
-            color: var(--neon-blue);
+            font-weight: 600;
         }
 
-        .leviathan .badge { color: var(--neon-purple); }
-
-        .project-desc {
-            color: #94a3b8;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            font-size: 1rem;
-        }
-
-        /* Canlı Terminal Simülasyonu */
-        .terminal-box {
-            background: var(--terminal-bg);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 8px;
-            padding: 15px;
-            font-family: monospace;
+        /* Alt Bilgi */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-secondary);
             font-size: 0.85rem;
-            color: #a7f3d0;
-            height: 120px;
-            overflow-y: hidden;
-            position: relative;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+            border-top: 1px solid var(--border-color);
+            background: var(--panel-bg);
+            margin-top: 40px;
         }
-
-        .terminal-box::before {
-            content: 'LIVE MONITOR';
-            position: absolute;
-            top: 5px; right: 10px;
-            font-size: 0.65rem;
-            color: var(--text-gray);
-            letter-spacing: 1px;
-        }
-
-        .log-line {
-            margin-bottom: 4px;
-            opacity: 0;
-            animation: fadeInLog 0.3s forwards;
-            white-space: nowrap;
-        }
-
-        .log-line.error { color: #f43f5e; }
-        .log-line.success { color: var(--neon-green); }
-
-        @keyframes fadeInLog { to { opacity: 1; } }
-
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="header">
-            <div class="logo-area">VALEX::CORE_SYSTEMS</div>
-            <a href="index.html" class="back-btn">&lt;// BACK_TO_HUB]</a>
+    <header>
+        <div class="nav-left">
+            <a href="index.html" class="back-btn">← [KORUMA PANELİNE DÖN]</a>
+            <div class="logo-text">VALEX LABS</div>
         </div>
+    </header>
 
-        <div class="project-grid">
-            
-            <!-- PROJE 1: TERMINAL-WARS -->
-            <div class="project-panel">
-                <div class="project-meta">
-                    <div class="project-title">⚡ Terminal-Wars Architecture</div>
-                    <div class="tech-badges">
-                        <span class="badge">Go</span>
-                        <span class="badge">WebSockets</span>
-                        <span class="badge">Concurrent Net</span>
-                    </div>
+    <main>
+        <h1 class="page-title">🚀 Geliştirilen Sistem Mimarileri <span>/ Depo</span></h1>
+
+        <div class="projects-grid">
+            <!-- Proje 1: Leviathan -->
+            <article class="project-card">
+                <div class="project-header">
+                    <h2 class="project-name">Project: Leviathan</h2>
+                    <span class="project-status">Production</span>
                 </div>
                 <p class="project-desc">
-                    Çoklu istemcilerin (multi-client) aynı anda, eşzamanlı olarak ağ komutları yürütebilmesi ve simüle edilmiş ağ ortamlarında operasyon gerçekleştirebilmesi için tasarlanmış yüksek performanslı WebSocket mimarisi. Thread-safe durum yönetimi ve anlık paket dağıtımı sağlar.
+                    Çok parçalı dosya şifreleme ve güvenli dağıtım platformu. Kaynak dosyaları kriptografik yöntemlerle 100 güvenli ikili (binary) parçaya bölerek bulut altyapılarına asenkron olarak dağıtır ve veri bütünlüğünü garanti altına alır.
                 </p>
-                <div class="terminal-box" id="term-wars-log">
-                    <!-- JS ile canlı log basılacak -->
+                <div class="tech-specs">
+                    <div class="spec-line"><span class="spec-label">Core Engine:</span> <span>Go v1.22</span></div>
+                    <div class="spec-line"><span class="spec-label">Architecture:</span> <span>Distributed Fragments</span></div>
+                    <div class="spec-line"><span class="spec-label">Encryption:</span> <span>AES-256 GCM</span></div>
                 </div>
-            </div>
+                <div class="tech-tags">
+                    <span class="tag">Go</span>
+                    <span class="tag">Cryptography</span>
+                    <span class="tag">Cloud Distribution</span>
+                    <span class="tag">Concurrency</span>
+                </div>
+            </article>
 
-            <!-- PROJE 2: LEVIATHAN -->
-            <div class="project-panel leviathan">
-                <div class="project-meta">
-                    <div class="project-title">🌀 Leviathan Storage Core</div>
-                    <div class="tech-badges">
-                        <span class="badge">Go Core</span>
-                        <span class="badge">Cryptography</span>
-                        <span class="badge">Data Sharding</span>
-                    </div>
+            <!-- Proje 2: Terminal-Wars -->
+            <article class="project-card purple">
+                <div class="project-header">
+                    <h2 class="project-name">Terminal-Wars</h2>
+                    <span class="project-status">Active Beta</span>
                 </div>
                 <p class="project-desc">
-                    Veri bütünlüğünü ve gizliliğini en üst düzeyde tutmak amacıyla, kaynak dosyaları 100 adet asimetrik ve şifreli binary parçaya (shards) bölerek bulut altyapılarına dağıtan, merkeziyetsiz depolama ve kriptografik dosya yönetim mekanizması.
+                    Komut satırı (CLI) üzerinden oynanan, gerçek zamanlı bir ağ simülasyon oyunu. Çoklu istemci (multi-client) mimarisi sayesinde oyuncular anlık WebSockets bağlantıları üzerinden birbirlerinin terminal sistemlerine siber operasyon simülasyonları düzenler.
                 </p>
-                <div class="terminal-box" id="leviathan-log" style="color: #e9d5ff;">
-                    <!-- JS ile canlı log basılacak -->
+                <div class="tech-specs">
+                    <div class="spec-line"><span class="spec-label">Network Protocol:</span> <span>WebSockets / TCP</span></div>
+                    <div class="spec-line"><span class="spec-label">Backend Matrix:</span> <span>Go Engine</span></div>
+                    <div class="spec-line"><span class="spec-label">UI Interface:</span> <span>Rich CLI Emulator</span></div>
                 </div>
-            </div>
-
+                <div class="tech-tags">
+                    <span class="tag">Go</span>
+                    <span class="tag">WebSockets</span>
+                    <span class="tag">Real-time Networking</span>
+                    <span class="tag">CLI UX</span>
+                </div>
+            </article>
         </div>
-    </div>
+    </main>
 
-    <script>
-        // Terminal Canlı Log Akış Simülasyonu
-        function createLogSimulator(elementId, logs, interval) {
-            const container = document.getElementById(elementId);
-            let index = 0;
+    <footer>
+        &copy; 2026 VALEX DEVELOPMENT ECOSYSTEM. ALL CORE ARCHITECTURES INDEXED SECURELY.
+    </footer>
 
-            setInterval(() => {
-                const line = document.createElement('div');
-                line.className = 'log-line';
-                
-                // Rastgele durum renkleri ekle
-                if(Math.random() > 0.85) {
-                    line.className += ' error';
-                    line.innerText = `[${new Date().toLocaleTimeString()}] [WARN] ` + logs[Math.floor(Math.random() * logs.length)];
-                } else if(Math.random() > 0.5) {
-                    line.className += ' success';
-                    line.innerText = `[${new Date().toLocaleTimeString()}] [OK] ` + logs[Math.floor(Math.random() * logs.length)];
-                } else {
-                    line.innerText = `[${new Date().toLocaleTimeString()}] [INFO] ` + logs[Math.floor(Math.random() * logs.length)];
-                }
-
-                container.appendChild(line);
-                if (container.children.length > 5) {
-                    container.removeChild(container.firstChild);
-                }
-                container.scrollTop = container.scrollHeight;
-            }, interval);
-        }
-
-        // Terminal Wars Log Havuzu
-        const twLogs = [
-            "WebSocket handshake initiated successfully.",
-            "Client connected from cluster session-7X9.",
-            "Broadcasting state updates to 24 active nodes...",
-            "Packet payload verified: SHA-256 integrity intact.",
-            "Syncing multiplexer state clock...",
-            "Command buffer cleared. Memory usage: 14.2MB"
-        ];
-
-        // Leviathan Log Havuzu
-        const lvLogs = [
-            "Source file analysis initialized.",
-            "Splitting binary stream into 100 discrete blocks...",
-            "Encrypting shard #042 with Galois/Counter Mode.",
-            "Distributing binary chunks to target storage arrays.",
-            "Parity blocks compiled. Redundancy overhead: 4%.",
-            "Cryptographic signature verified by master key."
-        ];
-
-        // Simülasyonları Başlat
-        createLogSimulator('term-wars-log', twLogs, 2200);
-        createLogSimulator('leviathan-log', lvLogs, 2800);
-    </script>
 </body>
 </html>
