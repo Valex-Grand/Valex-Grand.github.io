@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://valex-grand.github.io/sitemap.xml
