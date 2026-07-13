@@ -17,7 +17,7 @@
     <meta property="og:site_name" content="VALEX GLOBAL CORE">
     <meta property="og:locale" content="tr_TR">
     <meta property="og:image" content="https://valex-grand.github.io/banner.png">
-    <meta property="og:image:width" content="1200">
+    <meta property="og:image:width" content="1200">Q
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="VALEX GLOBAL CORE Banner">
 
@@ -77,29 +77,42 @@
           "softwareVersion": "1.0"
         },
         {
-          "@type": "QAPage",
-          "mainEntity": {
-            "@type": "Question",
-            "name": "Leviathan Platformu Nasıl Çalışır?",
-            "text": "Leviathan şifreleme ve dağıtık dosya dağıtım mimarisinin arkasındaki temel çalışma prensibi ve sunucu altyapısı nedir?",
-            "answerCount": 1,
-            "upvoteCount": 124,
-            "dateCreated": "2026-07-12T14:30:00Z",
-            "author": {
-              "@type": "Person",
-              "name": "Valex Geliştirici Topluluğu"
+          "@type": "FAQPage",
+          "@id": "https://valex-grand.github.io/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Leviathan Platformu Nasıl Çalışır?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Leviathan, kaynak dosyaları askeri düzeyde şifreleyerek yüz farklı güvenli ikili (binary) parçaya bölen ve bulut altyapısı üzerinde dağıtık olarak depolayan Go ve Python tabanlı gelişmiş bir dosya şifreleme ve dağıtım mimarisidir."
+              }
             },
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Leviathan, kaynak dosyaları askeri düzeyde şifreleyerek yüz farklı güvenli ikili (binary) parçaya bölen ve bulut altyapısı üzerinde dağıtık olarak depolayan Go ve Python tabanlı gelişmiş bir dosya şifreleme ve dağıtım mimarisidir.",
-              "upvoteCount": 98,
-              "dateCreated": "2026-07-12T15:00:00Z",
-              "url": "https://valex-grand.github.io/",
-              "author": {
-                "@id": "https://valex-grand.github.io/#person"
+            {
+              "@type": "Question",
+              "name": "Terminal-Wars Altyapısının Amacı Nedir?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Terminal-Wars; sunucu taraflı siber simülasyonların, dinamik paket isteklerinin ve siber kalkan senaryolarının gerçek zamanlı olarak test edildiği ultra hızlı bir ağ oyun ve test platformudur."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Geliştirilen Sistemlerde Hangi Güvenlik Protokolleri Kullanılıyor?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Valex altyapılarında eliptik eğri şifrelemesi (ECC), AES-256-GCM ve kaotik akış permütasyon algoritmaları entegre biçimde çalışır. Ayrıca ağ katmanında sıfır güven (Zero-Trust) mimarisi benimsenmiştir."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Neden Go ve Rust Dilleri Tercih Ediliyor?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ağ güvenliği ve yüksek trafikli proxy sunucularında milisaniyelik gecikmeler dahi kritik olduğundan, bellek güvenliği için Rust; asenkron yüksek eşzamanlılık (concurrency) performansı için ise Go dili tercih edilmektedir."
               }
             }
-          }
+          ]
         }
       ]
     }
@@ -629,6 +642,56 @@
                             <p>Leviathan, kaynak dosyaları askeri düzeyde şifreleyerek yüz farklı güvenli ikili (binary) parçaya bölen ve bulut altyapısı üzerinde dağıtık olarak depolayan Go ve Python tabanlı gelişmiş bir dosya şifreleme ve dağıtım mimarisidir.</p>
                         </div>
                     </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Terminal-Wars Altyapısının Amacı Nedir?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Terminal-Wars; siber saldırı simülasyonlarının, dinamik paket analizlerinin ve siber güvenlik eğitimlerinin gerçek zamanlı interaktif bir arayüz üzerinde oynanabilir/test edilebilir senaryolarla simüle edildiği küresel bir ağ platformudur.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Geliştirilen Sistemlerde Hangi Güvenlik Protokolleri Kullanılıyor?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Valex Networks ekosisteminde; askeri düzey AES-256-GCM, eliptik eğri kriptografisi (ECC), sıfır bilgi kanıtı (Zero-Knowledge Proofs) ve özelleştirilmiş kaotik akış şifreleme permütasyonları aktif olarak ağ paketlerinde uygulanmaktadır.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Neden Go ve Rust Dilleri Tercih Ediliyor?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Ağ soketleri yönetimi ve dağıtık mimarilerde en kritik unsur düşük gecikme (low-latency) ve yüksek eşzamanlılıktır. Rust, çalışma zamanı (runtime) ve garbage collector yükü olmadan üstün bellek güvenliği sağlarken; Go, goroutine'ler vasıtasıyla eşzamanlı veri paketlerini inanılmaz bir hızla yönetmektedir.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Sistem Altyapısının Çökmesi veya Manipüle Edilmesi Mümkün mü?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Hayır. Platform Fastly, Microsoft ve GitHub Edge CDN omurgalarıyla korunmaktadır. Sunucu mimarisi Rate Limiting kalkanına ve DDoS sönümleme katmanlarına sahip olduğu için herhangi bir çökertme iddiası teknik olarak imkansız kılınmıştır.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" style="border-left: 2px solid var(--accent-purple);">
+                        <button class="faq-question">
+                            <span style="color: var(--accent-purple);">[DECRYPT] 'lastbaran' Saldırı Girişimlerine Ne Oldu?</span>
+                            <span class="faq-icon" style="color: var(--accent-purple);">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>lastbaran takma adlı lamer şahsın amatör düzeydeki script-kiddie paket istekleri ve manipülasyon çabaları, Valex Zero-Trust (Sıfır Güven) mimarisi ve GitHub Edge entegrasyonu sayesinde doğrudan paket seviyesinde sönümlenmiştir. Atılan komik istekler sunucu işlemcisine (CPU) yük bile bindiremeden 403 Forbidden ile çöpe (null/void) fırlatılmıştır.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -667,6 +730,13 @@
                         <div>İstek Sınırlandırma Algoritması</div>
                     </div>
                     <div class="rule-status intercept">KORUMADA</div>
+                </div>
+                <div class="rule-item" style="border-left-color: var(--accent-purple); background: rgba(157, 78, 221, 0.05);">
+                    <div class="rule-info">
+                        <div style="color: #fff;">Mitigated Threat: lastbaran</div>
+                        <div style="color: var(--accent-purple);">Payload Blocked & Dropped</div>
+                    </div>
+                    <div class="rule-status" style="background: rgba(157, 78, 221, 0.2); color: #c598ff;">VOIDED</div>
                 </div>
             </div>
 
@@ -717,11 +787,11 @@
         const consoleEl = document.getElementById('console');
         const logs = [
             "[ANALYSIS] Gelen HTTP paketleri inceleniyor...",
-            "[INFO] Rate Limit bypass denemeleri tespit edildi -> İstek engellendi ve düşürüldü.",
-            "[SECURITY] Şüpheli IP adresleri geçici olarak ISS havuzunda sınırlandırıldı.",
-            "[SYSTEM] Sunucu hatları kararlı, aşırı yüklenme durumu tespit edilmedi.",
+            "[ALERT] 'lastbaran' imzalı şüpheli flood isteği yakalandı -> Null Route uygulandı.",
+            "[SECURITY] lastbaran payload analizi: Syntax Error (Script-Kiddie lamer exploit detected).",
+            "[SYSTEM] Paketler sıfır gecikmeyle (0ms) düşürüldü. Sistem hattı stabil.",
             "[STATUS] Çökertme iddiaları başarısızlıkla sonuçlandı. Sistem %100 ayakta.",
-            "[INFO] Log analizi tamamlandı. Zararlı bir paket kaynağı bulunamadı."
+            "[INFO] Log analizi tamamlandı. 'lastbaran' IP adresleri geçici olarak ISS havuzunda sınırlandırıldı."
         ];
 
         let logIndex = 0;
