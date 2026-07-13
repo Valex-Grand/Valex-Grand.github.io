@@ -4,124 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valex Cloud Security Infrastructure</title>
+    
     <!-- SEO Dopinglemesi -->
     <meta name="description" content="Valex-Grand - Independent Software Developer & Systems Architect. Core developer of Terminal-Wars and Leviathan architectures.">
     <meta name="keywords" content="Valex-Grand, Valex, tr.valexisresmii, Terminal-Wars, Leviathan, Go developer, Rust network security">
-    <canvas id="cyberLoader" style="position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:99999; background:#000; transition: opacity 0.8s ease; pointer-events: none;"></canvas>
-    <!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="VALEX GLOBAL CORE">
-<meta property="og:description" content="Independent Software Developer • Cyber Security • Go • Rust • Python • Creator of Leviathan & Terminal-Wars.">
-<meta property="og:url" content="https://valex-grand.github.io/">
-<meta property="og:site_name" content="VALEX GLOBAL CORE">
-<meta property="og:locale" content="tr_TR">
+    
+    <!-- Open Graph (Sosyal Medya Paylaşım Optimizasyonu) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="VALEX GLOBAL CORE">
+    <meta property="og:description" content="Independent Software Developer • Cyber Security • Go • Rust • Python • Creator of Leviathan & Terminal-Wars.">
+    <meta property="og:url" content="https://valex-grand.github.io/">
+    <meta property="og:site_name" content="VALEX GLOBAL CORE">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:image" content="https://valex-grand.github.io/banner.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="VALEX GLOBAL CORE Banner">
 
-<meta property="og:image" content="https://valex-grand.github.io/banner.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="VALEX GLOBAL CORE Banner">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VALEX GLOBAL CORE">
+    <meta name="twitter:description" content="Independent Software Developer • Cyber Security • Go • Rust • Python • Creator of Leviathan & Terminal-Wars.">
+    <meta name="twitter:image" content="https://valex-grand.github.io/banner.png">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="VALEX GLOBAL CORE">
-<meta name="twitter:description" content="Independent Software Developer • Cyber Security • Go • Rust • Python • Creator of Leviathan & Terminal-Wars.">
-<meta name="twitter:image" content="https://valex-grand.github.io/banner.png">
+    <!-- Arama Motoru Ayarları -->
+    <meta name="theme-color" content="#0a0f1d">
+    <meta name="author" content="Valex Grand">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://valex-grand.github.io/">
 
-<!-- SEO -->
-<meta name="theme-color" content="#0a0f1d">
-<meta name="author" content="Valex Grand">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://valex-grand.github.io/">
+    <!-- 🌐 SEMANTIK GRAPH SCHEMA (Google AI & Semantic SEO için Birleştirilmiş Ağ Yapısı) -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
     {
-      "@type": "QAPage",
-      "mainEntity": {
-        "@type": "Question",
-        "name": "Leviathan Platformu Nasıl Çalışır?",
-        "text": "Leviathan şifreleme ve dağıtık dosya dağıtım mimarisinin arkasındaki temel çalışma prensibi ve sunucu altyapısı nedir?",
-        "answerCount": 2,
-        "upvoteCount": 124,
-        "dateCreated": "2026-07-12T14:30:00Z",
-        "author": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
           "@type": "Person",
-          "name": "Valex Geliştirici Topluluğu"
+          "@id": "https://valex-grand.github.io/#person",
+          "name": "Valex Grand",
+          "alternateName": "Valex",
+          "url": "https://valex-grand.github.io/",
+          "image": "https://valex-grand.github.io/banner.png",
+          "jobTitle": "Independent Software Developer",
+          "description": "Independent software developer focused on cyber security, network technologies and full-stack development.",
+          "knowsAbout": [
+            "Cyber Security",
+            "Network Security",
+            "Go",
+            "Rust",
+            "Python",
+            "Full-Stack Development"
+          ],
+          "sameAs": [
+            "https://github.com/Valex-Grand",
+            "https://instagram.com/tr.valexisresmii",
+            "https://dev.to/valexgrand"
+          ]
         },
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Leviathan, kaynak dosyaları askeri düzeyde şifreleyerek yüz farklı güvenli ikili (binary) parçaya bölen ve bulut altyapısı üzerinde dağıtık olarak depolayan Go ve Python tabanlı gelişmiş bir dosya şifreleme ve dağıtım mimarisidir.",
-          "upvoteCount": 98,
-          "dateCreated": "2026-07-12T15:00:00Z",
-          "url": "https://github.io",
-          "author": {
-            "@type": "Person",
-            "name": "Valex Grand"
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://valex-grand.github.io/#software",
+          "name": "Leviathan",
+          "applicationCategory": "SecurityApplication",
+          "operatingSystem": "Linux, Windows",
+          "programmingLanguage": "Go",
+          "creator": {
+            "@id": "https://valex-grand.github.io/#person"
+          },
+          "description": "Leviathan is a distributed encryption and secure file architecture designed for high-performance and secure storage.",
+          "url": "https://valex-grand.github.io/",
+          "image": "https://valex-grand.github.io/banner.png",
+          "softwareVersion": "1.0"
+        },
+        {
+          "@type": "QAPage",
+          "mainEntity": {
+            "@type": "Question",
+            "name": "Leviathan Platformu Nasıl Çalışır?",
+            "text": "Leviathan şifreleme ve dağıtık dosya dağıtım mimarisinin arkasındaki temel çalışma prensibi ve sunucu altyapısı nedir?",
+            "answerCount": 1,
+            "upvoteCount": 124,
+            "dateCreated": "2026-07-12T14:30:00Z",
+            "author": {
+              "@type": "Person",
+              "name": "Valex Geliştirici Topluluğu"
+            },
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Leviathan, kaynak dosyaları askeri düzeyde şifreleyerek yüz farklı güvenli ikili (binary) parçaya bölen ve bulut altyapısı üzerinde dağıtık olarak depolayan Go ve Python tabanlı gelişmiş bir dosya şifreleme ve dağıtım mimarisidir.",
+              "upvoteCount": 98,
+              "dateCreated": "2026-07-12T15:00:00Z",
+              "url": "https://valex-grand.github.io/",
+              "author": {
+                "@id": "https://valex-grand.github.io/#person"
+              }
+            }
           }
         }
-      }
-    },
-    {
-      "@type": "SoftwareSourceCode",
-      "name": "Leviathan Architecture",
-      "programmingLanguage": "Python",
-      "codeRepository": "https://github.com",
-      "runtimePlatform": "Azure, GitHub CDN",
-      "description": "Dosyaları katmanlı parçalara ayırarak güvenli bir şekilde depolayan şifreleme algoritması."
+      ]
     }
-  ]
-}
     </script>
 
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Valex Grand",
-  "alternateName": "Valex",
-  "url": "https://valex-grand.github.io/",
-  "image": "https://valex-grand.github.io/banner.png",
-  "jobTitle": "Independent Software Developer",
-  "description": "Independent software developer focused on cyber security, network technologies and full-stack development.",
-  "knowsAbout": [
-    "Cyber Security",
-    "Network Security",
-    "Go",
-    "Rust",
-    "Python",
-    "Full-Stack Development"
-  ],
-  "sameAs": [
-    "https://github.com/Valex-Grand",
-    "https://instagram.com/valexgrand",
-    "https://dev.to/valexgrand"
-  ]
-}
-</script>
-
-
-    <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"SoftwareApplication",
-  "name":"Leviathan",
-  "applicationCategory":"SecurityApplication",
-  "operatingSystem":"Linux, Windows",
-  "programmingLanguage":"Go",
-  "creator":{
-    "@type":"Person",
-    "name":"Valex Grand"
-  },
-  "description":"Leviathan is a distributed encryption and secure file architecture designed for high-performance and secure storage.",
-  "url":"https://valex-grand.github.io/",
-  "image":"https://valex-grand.github.io/banner.png",
-  "softwareVersion":"1.0"
-}
-</script>
-
-    
     <style>
         :root {
             --bg-color: #0a0f1d;
@@ -305,6 +288,87 @@
             font-weight: 600;
         }
 
+        /* ❓ Görsel QA / FAQ Bölümü (SEO Spam Cezası Almamak İçin Eklendi) */
+        .faq-section {
+            margin-top: 5px;
+            margin-bottom: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 25px;
+        }
+
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(0, 210, 255, 0.08);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(0, 210, 255, 0.25);
+            background: rgba(255, 255, 255, 0.04);
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.05);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 15px 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            text-align: left;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            outline: none;
+        }
+
+        .faq-question:hover {
+            color: var(--accent-blue);
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            color: var(--accent-blue);
+            transition: transform 0.3s ease;
+            font-family: monospace;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            padding: 0 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            border-top: 1px solid transparent;
+        }
+
+        .faq-item.active {
+            border-color: rgba(0, 255, 102, 0.2);
+            background: rgba(0, 255, 102, 0.01);
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 15px;
+            border-top-color: rgba(255, 255, 255, 0.03);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            color: var(--accent-green);
+        }
+
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -415,7 +479,7 @@
             text-shadow: 0 0 10px rgba(255,255,255,0.3);
         }
 
-        /* Projelere Geçiş Butonu (Yeni) */
+        /* Projelere Geçiş Butonu */
         .projects-trigger-btn {
             display: block;
             width: 100%;
@@ -513,6 +577,9 @@
 </head>
 <body>
 
+    <!-- 🌐 SİBER GİRİŞ PERDESİ (Matris Karakterleri Akışı) -->
+    <canvas id="cyberLoader" style="position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:99999; background:#000; transition: opacity 0.8s ease; pointer-events: none;"></canvas>
+
     <header>
         <div class="logo-area">
             <div class="logo-icon"></div>
@@ -533,7 +600,7 @@
                 [MONITOR] Anlık gelen paket istekleri izleniyor... Kalkan durumu kararlı.<br>
             </div>
 
-            <!-- Yeni Eklenen Hakkımda Alanı -->
+            <!-- Core Architect Alanı -->
             <div class="about-section">
                 <div class="about-title">👨‍💻 Core Architect: Valex-Grand</div>
                 <div class="about-text">
@@ -549,6 +616,23 @@
                 </div>
             </div>
 
+            <!-- Sıkça Sorulan Sorular (SEO ve Yapay Zeka botları için can damarı) -->
+            <div class="faq-section">
+                <h2>❓ Sıkça Sorulan Sorular (Database Query)</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Leviathan Platformu Nasıl Çalışır?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Leviathan, kaynak dosyaları askeri düzeyde şifreleyerek yüz farklı güvenli ikili (binary) parçaya bölen ve bulut altyapısı üzerinde dağıtık olarak depolayan Go ve Python tabanlı gelişmiş bir dosya şifreleme ve dağıtım mimarisidir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metrik Kartları -->
             <div class="metrics-grid">
                 <div class="metric-card active">
                     <div class="metric-value">0 ms</div>
@@ -620,6 +704,7 @@
         &copy; 2026 VALEX NETWORKS. ALL RIGHTS RESERVED. SECURED BY MICROSOFT & FASTLY GLOBAL BACKBONE.
     </footer>
 
+    <!-- SAYAÇ & KONSOL LOG SCRIPT -->
     <script>
         // Sayaç Scripti (Her girişte artar)
         let count = localStorage.getItem('valex_visits') || Math.floor(Math.random() * 400) + 1200;
@@ -649,10 +734,26 @@
                 logIndex = 0;
             }
         }, 6000);
+
+        // Akordeon (QA/FAQ) Aktif Etme Scripti
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                const isActive = item.classList.contains('active');
+
+                if (!isActive) {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    item.classList.remove('active');
+                    answer.style.maxHeight = null;
+                }
+            });
+        });
     </script>
 
-
-    
+    <!-- MATRIX LOADER SCRIPT -->
     <script>
         const canvas = document.getElementById('cyberLoader');
         const ctx = canvas.getContext('2d');
@@ -703,7 +804,5 @@
             }, 800);
         }, 3000);
     </script>
-   
-</body>
 </body>
 </html>
