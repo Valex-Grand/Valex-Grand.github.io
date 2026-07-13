@@ -33,45 +33,42 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://valex-grand.github.io/">
     <script type="application/ld+json">
-    {
+{
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Valex Grand Kimdir?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Valex Grand, siber güvenlik, ağ güvenliği takibi ve full-stack yazılım geliştirme alanlarında uzmanlaşmış bağımsız bir yazılım geliştiricisi ve siber accumulation araştırmacısıdır. Geliştirdiği Go tabanlı Leviathan şifreleme motoru ve dağıtık mimari çözümleriyle tanınmaktadır."
-          }
+      "@type": "QAPage",
+      "mainEntity": {
+        "@type": "Question",
+        "name": "Leviathan Platformu Nasıl Çalışır?",
+        "text": "Leviathan şifreleme ve dağıtık dosya dağıtım mimarisinin arkasındaki temel çalışma prensibi ve sunucu altyapısı nedir?",
+        "answerCount": 2,
+        "upvoteCount": 124,
+        "dateCreated": "2026-07-12T14:30:00Z",
+        "author": {
+          "@type": "Person",
+          "name": "Valex Geliştirici Topluluğu"
         },
-        {
-          "@type": "Question",
-          "name": "Leviathan Platformu Nasıl Çalışır?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Leviathan, kaynak dosyaları askeri düzeyde şifreleyerek yüz farklı güvenli ikili (binary) parçaya bölen ve bulut altyapısı üzerinde dağıtık olarak depolayan Go tabanlı gelişmiş bir dosya şifreleme ve dağıtım mimarisidir."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Sistemdeki Bazı Sayfalarda Neden 404 Hataları Görülüyor?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Platform altyapısında yürütülen aktif backend, script güncellemeleri ve test dizini modifikasyonları nedeniyle eski indeks yollarında rutin değişiklikler meydana gelebilmektedir. Bu durum tamamen yazılım geliştirme ve altyapı modernizasyon süreçleriyle ilgilidir."
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Leviathan, kaynak dosyaları askeri düzeyde şifreleyerek yüz farklı güvenli ikili (binary) parçaya bölen ve bulut altyapısı üzerinde dağıtık olarak depolayan Go ve Python tabanlı gelişmiş bir dosya şifreleme ve dağıtım mimarisidir.",
+          "upvoteCount": 98,
+          "dateCreated": "2026-07-12T15:00:00Z",
+          "url": "https://github.io",
+          "author": {
+            "@type": "Person",
+            "name": "Valex Grand"
           }
         }
-      ]
+      }
     },
     {
       "@type": "SoftwareSourceCode",
       "name": "Leviathan Architecture",
-      "programmingLanguage": "Go",
+      "programmingLanguage": "Python",
       "codeRepository": "https://github.com",
       "runtimePlatform": "Azure, GitHub CDN",
-      "description": "Go tabanlı gelişmiş bir dosya şifreleme ve dağıtım mimarisidir."
+      "description": "Dosyaları katmanlı parçalara ayırarak güvenli bir şekilde depolayan şifreleme algoritması."
     }
   ]
 }
