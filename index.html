@@ -53,7 +53,7 @@
     </title>
 
 
-    <!-- GOOGLE FONT -->
+    
 
     <link
         rel="preconnect"
@@ -72,7 +72,7 @@
     >
 
 
-    <!-- LUCIDE ICONS -->
+    
 
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -1189,6 +1189,48 @@
 
         }
 
+
+        .project-card {
+            position: relative;
+        }
+
+        .unavailable-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            padding: 6px 9px;
+            border: 1px solid rgba(255, 184, 77, 0.25);
+            border-radius: 7px;
+            background: rgba(255, 184, 77, 0.08);
+            color: #ffc36b;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            padding: 10px 13px;
+            border: 1px solid rgba(140,106,255,0.35);
+            border-radius: 9px;
+            background: rgba(140,106,255,0.10);
+            color: var(--accent-light);
+            font-size: 12px;
+            font-weight: 700;
+            transition: all 0.25s ease;
+        }
+
+        .project-link:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            background: rgba(140,106,255,0.18);
+        }
 
         .project-icon {
 
@@ -3549,6 +3591,8 @@
 
                 <div class="project-card">
 
+                    <span class="unavailable-badge"><i data-lucide="lock"></i> Ulaşılamaz</span>
+
                     <div class="project-icon">
 
                         <i data-lucide="shield"></i>
@@ -3581,6 +3625,8 @@
 
 
                 <div class="project-card">
+
+                    <span class="unavailable-badge"><i data-lucide="lock"></i> Ulaşılamaz</span>
 
                     <div class="project-icon">
 
@@ -3620,6 +3666,8 @@
 
 
                 <div class="project-card">
+
+                    <span class="unavailable-badge"><i data-lucide="lock"></i> Ulaşılamaz</span>
 
                     <div class="project-icon">
 
@@ -3696,9 +3744,42 @@
 
                 </div>
 
+                <div class="project-card">
+
+                    <div class="project-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+
+                    <h3>valex-mask</h3>
+
+                    <p>
+                        Go programlama diliyle geliştirilen, sıfır bellek
+                        alokasyonu (0 alloc/op) hedefleyen yüksek performanslı
+                        bir log maskeleme ve temizleme kütüphanesi.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Go</span>
+                        <span>Performance</span>
+                        <span>Log Masking</span>
+                        <span>Zero Allocation</span>
+                    </div>
+
+                    <a class="project-link"
+                       href="https://github.com/Valex-Grand/valex-mask"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i data-lucide="github"></i>
+                        Projeye Git
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+
             </div>
 
-        </section>
+</section>
 
 
         
